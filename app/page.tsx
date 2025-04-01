@@ -3,6 +3,10 @@ import CheckBoxCard from "@/components/shared/check-box-card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
+interface SelectedPagesState {
+  [key: number]: boolean;
+}
+
 const pages = [
   { id: 1, name: "Page 1" },
   { id: 2, name: "Page 2" },
@@ -11,19 +15,15 @@ const pages = [
 ];
 
 export default function Home() {
-  const [selectedPages, setSelectedPages] = useState<{
-    [key: number]: boolean;
-  }>({});
+  const [selectedPages, setSelectedPages] = useState<SelectedPagesState>({});
 
   const isAllSelected = pages.every((page) => selectedPages[page.id]);
 
   const handleSelectAll = () => {
     if (isAllSelected) {
-      // If all are selected, unselect all
       setSelectedPages({});
     } else {
-      // Select all pages
-      const newSelected = pages.reduce((acc, page) => {
+      const newSelected = pages.reduce<SelectedPagesState>((acc, page) => {
         acc[page.id] = true;
         return acc;
       }, {});
