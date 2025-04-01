@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   return (
-    <div className="m-3.5">
+    <div className="flex justify-center items-center min-h-screen">
       <div className="w-[370px] h-[326px] top-[85px] left-[104px] rounded-[6px] border border-[#EEEEEE] shadow-[0px_8px_15px_0px_#1414141F,0px_0px_4px_0px_#1414141A] flex flex-col justify-center items-center">
         <CheckBoxCard
           text="All Pages"

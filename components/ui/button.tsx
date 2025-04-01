@@ -10,12 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground w-[340px] h-[40px] top-[20px] left-[20px] rounded-[4px] px-[10px] py-[20px] gap-[10px] hover:top-[80px] hover:bg-secondary transition-all duration-0",
-
-        variant2:
-          "bg-secondary text-secondary-foreground w-[340px] h-[40px] top-[80px] left-[20px] rounded-[4px] px-[10px] py-[20px] gap-[10px] ",
-        variant3:
-          "bg-primary text-secondary-foreground w-[340px] h-[40px] top-[140px] left-[20px] rounded-[4px] px-[10px] py-[20px] gap-[10px] ",
+          "bg-primary text-primary-foreground w-[340px] h-[40px]  rounded-[4px] px-[10px] py-[20px] gap-[10px]  hover:bg-secondary transition-all duration-0 active:bg-primary",
       },
     },
     defaultVariants: {
